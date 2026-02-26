@@ -1,0 +1,35 @@
+baseURL = 'https://victorhge.github.io/'
+languageCode = 'en-us'
+[params]
+	displayFullLangName = true
+	author = 'Victor Ren'
+	[params.contact]
+		email = 'victorhge@gmail.com'
+[module]
+	[[module.imports]]
+		path="github.com/adityatelange/hugo-PaperMod"
+
+theme = "PaperMod"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+defaultContentLanguageInSubdir = false
+DefaultContentLanguage = "en"
+[languages]
+  [languages.en]
+	title = 'Illusion and Trifle'
+	languageName = "English"
+    weight = 1
+  [languages.zh]
+    title = "海市如幻，雕虫为真"
+    languageName = "中文"
+    weight = 2
+
+
+[Social]
+  github = "victorhge"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
