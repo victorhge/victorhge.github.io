@@ -1,6 +1,7 @@
 baseURL = 'https://victorhge.github.io/'
 languageCode = 'en-us'
 [params]
+	comments = true
 	displayFullLangName = true
 	author = 'Victor Ren'
 	[params.contact]
@@ -33,3 +34,7 @@ DefaultContentLanguage = "en"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[services]
+  [services.disqus]
+    shortname = 'Victor'
