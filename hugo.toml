@@ -9,6 +9,11 @@ languageCode = 'en-us'
 [module]
 	[[module.imports]]
 		path="github.com/adityatelange/hugo-PaperMod"
+[params.giscus]
+ repo = "victorhge/victorhge.github.io"
+ repo-id="R_kgDORZLkcQ"
+ category="Announcements"
+ category-id="DIC_kwDORZLkcc4C3Y3X"
 
 theme = "PaperMod"
 
@@ -35,6 +40,3 @@ DefaultContentLanguage = "en"
   [caches.images]
     dir = ':cacheDir/images'
 
-[services]
-  [services.disqus]
-    shortname = 'Victor'
