@@ -28,10 +28,9 @@ DefaultContentLanguage = "en"
 	languageName = "English"
     weight = 1
   [languages.zh]
-    title = "海市如幻，雕虫为真"
+    title = "海市如幻，雕虫求真"
     languageName = "中文"
     weight = 2
-
 
 [Social]
   github = "victorhge"

@@ -1,8 +1,8 @@
 +++
 title = "交换Ctrl和Alt键"
 date = 2026-02-25T20:59:00+08:00
-tags = ["Emacs"]
-categories = ["Tips"]
+tags = ["Emacs", "keybinding"]
+categories = ["Trifle"]
 draft = false
 creator = "Emacs 30.2 (Org mode 9.7.39 + ox-hugo)"
 +++
