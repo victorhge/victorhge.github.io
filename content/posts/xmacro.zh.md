@@ -5,12 +5,12 @@ description = "C/C++ 项目中解决一致性问题的一种简单技巧"
 date = 2026-03-12T00:00:00+08:00
 keywords = ["X", "Macros", [",", "C语言"], [",", "元编程"]]
 tags = ["C/C++", "Programming"]
-categories = ["小技"]
+categories = ["Trifle"]
 draft = false
 +++
 
-> 我们无法用制造问题的同一思维层次来解决问题。
-> --- 阿尔伯特·爱因斯坦
+> 我们无法用制造问题的同一思维层次来解决问题。[^fn:1]
+> --- “阿尔伯特·爱因斯坦”
 
 
 ## 一致性挑战 {#一致性挑战}
@@ -62,10 +62,10 @@ int main()
 ## X Macros {#x-macros}
 
 在查找解决方案的过程中，我看到了 Randy Meyers 发表在 _Dr. Dobb's Journal_ 上的一
-篇文章 **The New C: X Macros**&nbsp;[^fn:1]。文章介绍了一种利用 C 预处理器实现简单代码生
+篇文章 **The New C: X Macros**&nbsp;[^fn:2]。文章介绍了一种利用 C 预处理器实现简单代码生
 成的技巧。
 
-这种技巧通常被称为 **X Macros** 。
+这项技巧通常被称为 **X Macros** 。
 
 它的基本思路是维护一份统一的数据列表，然后通过不同的宏定义方式生成所需要的代码结构。
 
@@ -123,7 +123,7 @@ const char *state_desc[] = {
 X Macros 带来的好处并不是没有代价的。宏的写法会略微降低代码的直观可读性，可调试性。
 
 -   **提高可读性**：可以参考 Andrew Lucas 的建议，把宏 `X` 作为参数传递给数据列表，以提
-    高代码的可读性[^fn:2]。
+    高代码的可读性[^fn:3]。
 
 -   **大数据量**：如果数据量足够大，可能会碰到编译器行长度限制。 Randy Meyers在文章
     中已经给出了方案 —— 把数据列表定义在一个独立的 .def 或者 .h 文件中, 在需要展开
@@ -140,7 +140,7 @@ X Macros 带来的好处并不是没有代价的。宏的写法会略微降低�
 
 ## 总结 {#总结}
 
-X Macro 本质上是一种基于 C/C++ 预处理器的简单元编程技巧。在缺乏反射或代码生成机
+X Macros 本质上是一种基于 C/C++ 预处理器的简单元编程技巧。在缺乏反射或代码生成机
 制的情况下，这种方法为 C/C++ 提供了一种轻量而实用的工程技巧。
 
 它通过维护一份**单一数据源（Single Source of Truth）**，再利用宏展开生成不同的代
@@ -149,6 +149,8 @@ X Macro 本质上是一种基于 C/C++ 预处理器的简单元编程技巧。�
 它的历史可以溯源到上世纪60年代的汇编语言编程，传承至今， 在需要维护大量一致性数
 据的场景中，它仍然有不可替代的价值, 是每一个C/C++工程师的必备工具。
 
-[^fn:1]: Randy Meyers. "The New C: X macros", Dr.Dobb's 2001, 可访问链接：
+[^fn:1]: 溯源的时候，发现这个：
+    <https://www.quora.com/Einstein-said-that-you-cannot-solve-a-problem-from-the-same-level-of-consciousness-that-created-it-What-did-he-mean-with-it-Can-you-use-a-concrete-example>
+[^fn:2]: Randy Meyers. "The New C: X macros", Dr.Dobb's 2001, 可访问链接：
     <https://jacobfilipp.com/DrDobbs/articles/CUJ/2001/0105/meyers/meyers.htm>
-[^fn:2]: Andrew Lucas. ["Reduce C-language coding errors with X macros"](https://www.embedded.com/reduce-c-language-coding-errors-with-x-macros-part-1/), Embedded.com, 2013.
+[^fn:3]: Andrew Lucas. ["Reduce C-language coding errors with X macros"](https://www.embedded.com/reduce-c-language-coding-errors-with-x-macros-part-1/), Embedded.com, 2013.
