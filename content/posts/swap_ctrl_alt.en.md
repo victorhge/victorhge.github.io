@@ -7,6 +7,8 @@ draft = false
 creator = "Emacs 30.2 (Org mode 9.7.39 + ox-hugo)"
 +++
 
+{{< figure src="/ox-hugo/lisp-machine-keyboard-2.jpg" >}}
+
 This is an essential configuration for all the computers I use, all because of
 Emacs.
 
